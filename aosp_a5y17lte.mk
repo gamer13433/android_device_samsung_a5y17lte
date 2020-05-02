@@ -61,5 +61,4 @@ TARGET_GAPPS_ARCH := arm64
 #EvoX
 config_deviceHardwareKeys := true
 config_deviceHardwareWakeKeys := true
-#CUSTOM_BUILD_TYPE = OFFICIAL
 #config_showNavigationBar := true
