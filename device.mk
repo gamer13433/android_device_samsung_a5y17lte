@@ -26,3 +26,15 @@ $(call inherit-product, device/samsung/universal7880-common/common.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/a5y17lte/a5y17lte-vendor.mk)
+
+PRODUCT_PACKAGES += \
+    CameraGo \
+    Face \
+    Updates
+
+CUSTOM_PROPERTIES += \
+    org.evolution.ota.version_code=$(CUSTOM_OTA_VERSION_CODE) \
+    sys.ota.disable_uncrypt=1
+
+PRODUCT_COPY_FILES += \
+    vendor/aosp/config/permissions/org.evolution.ota.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.evolution.ota.xml
